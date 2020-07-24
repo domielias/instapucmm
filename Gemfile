@@ -17,8 +17,19 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 #Database Mongodb
 gem 'mongoid', '~> 7.1.0'
-#d
+#Mongo Ruby Driver
 gem "mongo", "~> 2.12.0.rc0"
+# gem bootstrap 
+gem 'bootstrap', '~> 4.4.1'
+#Gem devise
+gem 'devise', '~> 4.7.1'
+# gema de active storage drag and drop
+gem 'active_storage_drag_and_drop', '~> 1.1'
+#Gema para imagenes
+gem 'shrine-mongoid', '~> 1.0'
+# Use amazon s3
+gem "aws-sdk-s3", "~> 1.61.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

@@ -4,9 +4,7 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      #uri: mongodb+srv://elias:eliasbasededatos@basededatos2-shard-00-01-iwt5m.mongodb.net
-      uri: mongodb+srv://elias:eliasbasededatos@basededatos2-iwt5m.mongodb.net/basededatos2?retryWrites=true
-      #uri: mongodb+srv://elias:eliasbasededatos@basededatos2-iwt5m.mongodb.net/test?retryWrites=true
+      uri: ENV['uri_base_dedatos']
 
       # Otherwise define the parameters separately.
       # This defines the name of the default database that Mongoid can connect to.

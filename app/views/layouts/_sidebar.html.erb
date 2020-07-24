@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <div class="container">
+    <%= link_to "InstaPucmm", root_path, class: 'navbar-brand' %> 
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/" class="nav-link">Inicio</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <%= link_to "Recientes", images_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <%= link_to "Upload", upload_path, class: 'btn btn-primary' %> 
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+          <%= link_to current_user.full_name, profile_path(current_user.username), class: 'nav-link' %> 
+      </li>
+      <li class="nav-item">
+          <%= link_to "Salir", destroy_user_session_path, class: 'nav-link',method: :delete %> 
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Iniciar", new_user_session_path, class: 'nav-link' %> 
+      </li>
+      <li class="nav-item">
+          <%= link_to "Crear una cuenta", new_user_registration_path, class: 'btn btn-primary' %> 
+      </li>
+      <% end %>       
+    </ul>
+  </div>
+</nav>
+
+

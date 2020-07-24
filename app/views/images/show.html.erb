@@ -1,0 +1,24 @@
+<h2>Image</h2>
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-body p-2">
+        <% if @image.present? %>
+          <%= image_tag @image.image_url, class: 'd-block w-100' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <%= link_to @image.user.full_name, profile_path(@image.user.username) %>
+
+    <p class="border-top mt-3 py-2">
+      <% if @image.description.present? %>
+        <%= @image.description %> -
+      <% end %>
+      <span class="text-muted"><%= time_ago_in_words @image.created_at %> ago</span>
+    </p>
+  </div>
+</div>
