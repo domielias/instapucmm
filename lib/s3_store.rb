@@ -1,5 +1,5 @@
 class S3Store
-  BUCKET = "basededatos2".freeze
+  BUCKET = ENV['bucket'].freeze
 
   def initialize file
     @file = file

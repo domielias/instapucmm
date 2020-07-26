@@ -4,7 +4,7 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      uri: ENV['uri_base_dedatos']
+      uri: "<%= ENV['MONGODB_URI'] %>"
 
       # Otherwise define the parameters separately.
       # This defines the name of the default database that Mongoid can connect to.
@@ -30,10 +30,10 @@ development:
         #     - use: web
 
         # The name of the user for authentication.
-         #user: 'elias'
+         #user: 
 
         # The password of the user for authentication.
-         #password: 'eliasbasededatos'
+         #password: 
 
         # The user's database roles.
         # roles:
